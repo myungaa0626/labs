@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>슬라이드</title>
+<link rel="stylesheet" href="../css/css.css">
+
+<link rel="stylesheet" 
+	href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.css"/>
+ 	<style>
+		html,body{
+			position: relative;
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		table{
+			margin: auto;
+		} 
+		
+		tr, th, td {
+			border: 1px solid;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.swiper-slide{
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.swiper-slide img {
+			display: block;
+			object-fit:cover;
+		}
+	</style>
+</head>
+<body>
+	<!-- Swiper -->
+		<div #swiperRef="" class="swiper mySwiper">
+		 	<div class="swiper-wrapper">
+			 	<div class="swiper-slide">
+			 		<img height="200px" width="200px" src="../images/gosum.jpg" alt="고슴도치"/>
+			 	</div>
+			 	<div class="swiper-slide">
+			 		<img height="200px" width="200px" src="../images/neoguri.jpg" alt="너구리"/>
+			 	</div>
+			 	<div class="swiper-slide">
+			 		<img height="200px" width="200px" src="../images/quaka.jpg" alt="쿼카"/>
+			 	
+			 	</div>
+			 	<div class="swiper-slide">
+			 		<img height="200px" width="200px" src="../images/samak.jpg" alt="사막여우"/>
+			 	</div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-pagination"></div>
+		 </div>
+		<table>
+			<tr>
+				<td><img src="../images/gosum.jpg" width="225px" height="200px"
+				onclick="changeBackground('../images/gosum.jpg')">   </td>
+				<td id="showImage" rowspan="3" width=800px height=675px></td>
+			</tr>
+			<tr>
+				<td><img src="../images/neoguri.jpg" width="225px" height="200px"
+				onclick="changeBackground('../images/neoguri.jpg')">   </td>
+				<td>   </td>
+			</tr>
+			<tr>
+				<td><img src="../images/quaka.jpg" width="225px" height="200px"
+				onclick="changeBackground('../images/quaka.jpg')">   </td>
+				<td>   </td>
+			</tr>
+		</table>
+	<script>
+		function changeBackground(imageUrl){
+			var showImage = document.getElementById("showImage");
+			showImage.style.backgroundImage = "url('"+imageUrl+"')";
+		}
+	</script>
+<!-- swiper js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper(".mySwiper",{
+			slidesPerView: 3,
+			loop: true,
+			centeredSlides: true,
+			spaceBetween: 0,
+			autoplay: {
+				delay: 3000
+			},
+			pagination: {
+				el : ".swiper-pagination",
+				type : "fraction",	
+			},
+			navigation : {
+				nextEl : ".swiper-button-next",
+				prevEl : ".swiper-button-prev",
+			},
+		});
+	</script>
+</body>
+</html>

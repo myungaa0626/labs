@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex09_jquery</title>
+<!-- CDN 방식 -->
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<!-- file 방식 링크 -->
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+<link href="../css/main.css" rel="stylesheet" >
+<script type="text/javascript" src="../js/" ></script>
+</head>
+<body>
+
+	<h2>jQuery Sample </h2>
+	
+<input id = "inputdemo" value="">
+<input type = "button" value="변환1">
+<input type = "button" value="변환2">
+
+<div class="welcome"></div>
+<div class="welcome"></div>
+<div class= "demo">
+	<div class="inner"> Create jQuery Test </div>
+</div><hr>
+
+
+
+<!-- // font size = 15px -->
+<div id = "name"> 이부분에 클릭 이벤트가 발생하면 자신이름 출력하기</div>
+
+
+<script type="text/javascript">
+
+	$(() => $('#name').on('click', function () {
+	    $(this).html('mk')
+	        .css({
+	            'font-size': '64px',
+	            'color': 'blue'
+	        }).show(3000)
+	}))
+
+</script>
+
+
+<script type="text/javascript">
+
+	$(function(){
+		
+		
+//	document.getElementsByTagName('h2')[0].style.color = 'red';
+	$('h2').css({ 'color':'skyblue' });
+//  체이닝(chain) 방식
+//	on(1, 2); on('event', function(){ })
+/* 	$('.welcome').html('hello world Deabo th2');
+	$('.welcome').css('background-color', 'aqua')
+	$('.welcome').on('click mousemove keyup',function(){
+		  		 	 $(this).css('background-color', 'gray')	
+		  		 	 
+		  		 }); */
+	
+	$('.welcome').html('hello world Deabo th2');
+	$('.welcome').css('background-color', 'aqua')
+	$('.welcome').on('click',function(e){
+//				$('.welcome').hide()	
+//		  		 	 console.log(e);
+					let clicked = e.target;
+					console.log(clicked);
+					$(this).css('background.color', 'red')
+		  		 });
+
+//	$('h1').css('color', 'aqua');
+//   #demo .inner 글자에 언더라인
+//	$('#demo .inner').css('text-decoration', 'underline')
+//  아래쪽에 5px 두께 실선 red
+//	$('#demo .inner').css('border-bottom', '5px solid red')
+
+//  기울기
+//  $('#demo .inner').css('transform', 'rotate(45deg)')
+//  $('#demo .inner').css('opacity', '0.5') // px 생략가능
+/*     $('#demo .inner').css({
+    	
+    	'text-decoration':'underline',
+    	'border-bottom':'5px solid red',
+    	'transform':'rotate(45deg)',
+    	'opacity': .3
+    	
+    }); */
+    
+// $('선택자').on('이벤트종류', 할일)
+
+/* 		$('#demo, h2, div').on('mouseover',function(){
+			
+			$('.inner').css('background', 'green');
+			
+		});
+		
+		$('#demo, h2, div').on('mouseout',function(){
+			
+			$('.inner').css('background', 'white').html('글자변경');
+			
+		}) */
+		
+	});
+
+// 여러 선택자에 이벤트 추가
+
+/* $('#demo, h2, div').mouseover(function(){
+	
+	$(this).css('background', 'yellow').html('deabo th2');
+	
+}); */
+
+</script>
+
+</body>
+</html>

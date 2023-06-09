@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+div{
+	
+	color: red !important;
+	border: 3px solid;
+	width: 100px;
+	height: 100px;
+	background-image: url('../images/Flowser1.jpg');
+	
+
+}
+
+#color_yellow{color:yellow;} /* 100 */
+
+.color_green{color: green;} /* 10 */
+
+*{color: darkblue;} /* 0 */
+
+.list li.item{ } 
+.list li:hover{ }
+.box::before{ }
+#submit span{ }
+header .menu li:nth-child(2){ }
+hi{ }
+:not(.box){ }
+
+

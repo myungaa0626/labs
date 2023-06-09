@@ -1,0 +1,25 @@
+body{ background-color:yellow }
+
+        #tab
+        {
+
+            border: 2px dotted blue;
+            width: 650px;
+            height: 30px;
+            text-align: center;
+            border-color: aqua;
+            border-collapse: collapse;
+        }
+        /* table, tr, td{
+
+            border: 1px dashed black;
+
+        } */
+        .tbl, tr, td, th{
+
+
+            border: 4px dashed red;
+
+        }
+
+        .xy{ border: pink;}

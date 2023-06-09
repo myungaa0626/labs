@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tag - form : get / post 전송방식</title>
+</head>
+<body>
+	<h4>전송방식 : get / post </h4>	
+	<!-- 
+	post 전송 방식 : 글자수 제한 없음. 약한 보안
+	http://localhost:8080/day43_html/jsp/result.jsp
+	 -->
+	<h2> post 전송방식</h2>
+	<form action="../jsp/result.jsp"  method ="post">           <!--  전송방식을 post 으로 함 -->
+		이름 : <input type="text" name="name" id="name" required="required" placeholder="이름입력요망"> <br>
+		비번 : <input type="password" name="pwd" id="pwd" required="required" placeholder="비밀번호 입력 요망" > <br>
+		메일 : <input type="email" name="mail" required="required"
+						 placeholder="ex@kosa.co.kr"> <br><br>
+		<input type = "submit" value = "전송"> &nbsp;&nbsp;&nbsp;&nbsp;
+		<input type = "reset" value = "취소"> 
+	</form>
+	
+	
+	
+<!-- 	get 방식 전송 : 글자수에 제한이 잇음 (255자), 보안에 취약하다.
+	http://localhost:8080/day43_html/html/ex0_form.html?irum=efsdfsd&pwd=sdfsdf&mail=sfdsdf%40sdfsdf    
+	뒤에 모든 내용들이 전부다 보임 (보안이 안좋은 상태) -->
+	<h2> get 전송방식</h2>
+	<form action="../jsp/result.jsp"  method ="get">           <!--  전송방식을 get 으로 함 -->
+		이름 : <input type="text" name="name" id="name" placeholder="이름입력요망"> <br>
+		비번 : <input type="password" name="pwd" id="pwd" placeholder="비밀번호 입력 요망"> <br>
+		메일 : <input type="email" name="mail"> <br><br>
+		<input type = "submit" value = "전송"> &nbsp;&nbsp;&nbsp;&nbsp;
+		<input type = "reset" value = "취소"> 
+	</form>
+</body>
+</html>

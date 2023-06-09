@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+html,body{
+	position: relative;
+	height: 100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+table{
+	margin: auto;
+} 
+
+tr, th, td {
+	border: 1px solid;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-slide img {
+	display: block;
+	object-fit:cover;
+}
+		

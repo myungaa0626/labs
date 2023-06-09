@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;	
+}
+
+div{
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	text-align: center;	
+}
+
+#multi{
+	color: orange;
+	font-size: 15px;
+}
+
+
+

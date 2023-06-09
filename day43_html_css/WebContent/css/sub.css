@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+
+.box{
+	width:100px;
+	height:100px;
+	background-color: orange;
+	transition: 1s;
+}
+
+.box:focus {
+	width: 300px;
+	background-color: royalblue;
+}
+
+input:focus {
+	background-color: yellow;
+}
+
+/*
+.fruits span:first-child{
+	color: red;
+}
+
+.fruits h3:last-child{
+	color: blue;
+	font-weight: bold;
+}
+
+.fruits *:nth-child(2){
+	color: red;	
+}
+
+*/
+
+.fruits *:nth-child(2n+1){ /* n은 0 부터 시작*/
+	color: red;
+}
+
+.fruits *:not(span){
+	color: red;
+}
+
+.box::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height:30px;
+	background-color: royalblue;
+}
+
+/* .box::before {
+	content: "앞";
+} */

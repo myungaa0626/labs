@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table{
+	background-color: aqua;
+	margin-left: auto;
+	margin-right: auto;
+	}
+</style>
+</head>
+<body>
+	<form action="" method="get">
+		<h1 align="center">회원 정보 입력</h1>
+		<hr>
+		<table align="center" border ="1" width="500px" height="800">
+			<tr>  <th>*ID</th>     				    
+			<th align="left"><input type="text" name="id" required="required" placeholder="ID 입력"></th> </tr>
+			<tr>  <th>*Password</th>        		
+			<th align="left"><input type="password" name="pwd" id="pwd" required="required" placeholder="Password 입력" ></th> </tr>
+			<tr>  <th>*Password 확인</th>	            
+			<th align="left"><input type="password" name="pwdChk" id="pwdChk" required="required" placeholder="Password 재입력" ></th> </tr>
+			<tr>  <th>*이름</th>        				
+			<th align="left"><input type="text" name="name" id="name" required="required" placeholder="이름 입력"></th> </tr>
+			<tr>  
+				  <th>*전화번호</th>        			
+				  <th align="left"><select>						
+						<option>010</option>
+						<option>011</option>
+						<option>012</option>
+					  </select>
+					   - <input type="text" style="width:40px;"> - <input type="text" style="width:40px;">
+				  </th> 
+		   </tr>
+			<tr>  <th>직업</th>        				
+				  <th align="left">
+				  	  <select>						
+						<option>직업 선택</option>
+						<option>학생</option>
+						<option>무직</option>
+					  </select>
+				  </th> 
+		   </tr>
+			<tr>  <th>성별</th>        				
+								<td align="left" style="font-size:15px;"><input type="radio" name="opt" checked> 남
+			   						<input type="radio"> 여 <br><br></td>
+		    </tr>
+			<tr>  <th>취미</th>        				
+								<td align="left" style="font-size:15px;"><input type="checkbox" > 독서
+				  					<input type="checkbox" > 수영
+				  					<input type="checkbox" > 게임
+				  					<input type="checkbox" > 영화감상 
+				  					<input type="checkbox" > 음악듣기
+				  					<br><br></td>
+		    </tr>
+			<tr>  <th>자기소개</th>        			
+								<td align="center">
+
+								<textarea rows="10" cols="55"></textarea>
+								</td> 
+			</tr>					
+			<tr>  <th colspan ="2">
+					<input type='button' value='등록하기'/>
+					<input type='button' value='취소하기'/>
+			</th></tr>
+		</table>
+	</form>	
+</body>
+</html>
